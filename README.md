@@ -80,7 +80,7 @@ Lo más importante es el ServerName, que es el nombre al que responde, y el Docu
 
 Captura 2: cat de taskflow.conf.
 
-![Captura 2](img/captura2.png)
+![Captura 2](captura2.png)
 
 ## Paso 3. Crear el sitio por defecto
 
@@ -107,7 +107,7 @@ cat /etc/apache2/sites-available/00-catchall.conf
 
 Captura 3: cat de 00-catchall.conf.
 
-![Captura 3](img/captura3.png)
+![Captura 3](captura3.png)
 
 ## Paso 4. Activar los sitios y recargar Apache
 
@@ -122,7 +122,7 @@ sudo apache2ctl configtest
 
 Captura 4: apache2ctl configtest con el resultado Syntax OK.
 
-![Captura 4](img/captura4.png)
+![Captura 4](captura4.png)
 
 También sale el aviso AH00558 de que no puede determinar el nombre del servidor (FQDN). Es solo un aviso y no afecta al funcionamiento de los sitios.
 
@@ -135,7 +135,7 @@ ls -l /etc/apache2/sites-enabled/
 
 Captura 5: ls -l de sites-enabled, donde solo aparecen 00-catchall.conf y taskflow.conf.
 
-![Captura 5](img/captura5.png)
+![Captura 5](captura5.png)
 
 ```bash
 sudo apache2ctl -S
@@ -143,7 +143,7 @@ sudo apache2ctl -S
 
 Captura 6: apache2ctl -S. Se ve que el servidor por defecto es localhost (00-catchall.conf) y que taskflow.local está cargado desde taskflow.conf con el alias www.taskflow.local.
 
-![Captura 6](img/captura6.png)
+![Captura 6](captura6.png)
 
 ## Paso 5. Añadir taskflow.local a /etc/hosts
 
@@ -156,7 +156,7 @@ cat /etc/hosts
 
 Captura 7: cat /etc/hosts con la línea de taskflow.local.
 
-![Captura 7](img/captura7.png)
+![Captura 7](captura7.png)
 
 ## Paso 6. Comprobar con curl
 
@@ -170,7 +170,7 @@ Con curl -I sale HTTP/1.1 200 OK y el servidor Apache/2.4.58 (Ubuntu). Al pedir 
 
 Captura 8: las tres peticiones con curl.
 
-![Captura 8](img/captura8.png)
+![Captura 8](captura8.png)
 
 ## Paso 7. Comprobar los logs separados
 
@@ -184,7 +184,7 @@ En la carpeta de logs aparecen los ficheros de taskflow y los de default. En tas
 
 Captura 9: ls de /var/log/apache2 y los tail de los dos logs.
 
-![Captura 9](img/captura9.png)
+![Captura 9](captura9.png)
 
 ## Conclusión
 
