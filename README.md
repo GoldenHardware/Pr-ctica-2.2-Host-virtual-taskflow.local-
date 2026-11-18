@@ -2,9 +2,9 @@
 
 Módulo: Despliegue de aplicaciones web (2º DAW)
 
-Alumno: ______________________
+Alumno: Javier Doñoro Garcia
 
-Fecha: ____ / ____ / 2026
+Fecha: 18 / 11 / 2026
 
 ## Introducción
 
