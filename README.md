@@ -49,7 +49,7 @@ ls -l /var/www/taskflow
 
 Captura 1: ls -l /var/www/taskflow, donde se ve el index.html con propietario www-data.
 
-![Captura 1](img/captura1.png)
+![Captura 1](captura1.png)
 
 ## Paso 2. Crear taskflow.conf
 
